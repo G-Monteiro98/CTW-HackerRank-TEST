@@ -11,10 +11,14 @@ public abstract class AccountHolder {
      */
     protected AccountHolder(int idNumber) {
         // TODO: complete the constructor
+        this.idNumber;
     }
 
     public int getIdNumber() {
         // TODO: complete the method
-        throw new RuntimeException("TODO");
+        if (this.idNumber <= 0) {
+		    throw new RuntimeException("Invalid ID Number");
+	    }
+        return this.idNumber;
     }
 }
